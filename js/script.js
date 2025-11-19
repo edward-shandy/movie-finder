@@ -17,12 +17,12 @@ function searchMovies(){
                 $.each(movies, function(i, data){
                     $('#list-movie').append(`
                         <div class="col-md-3">
-                            <div class="card mb-3">
-                                <img src="`+ data.Poster +`" class="card-img-top" alt="...">
-                                <div class="card-body">
+                            <div class="card h-100 d-flex flex-column">
+                                <img src="`+ data.Poster +`" class="card-img-top w-100" style="height: 350px; object-fit: cover;" alt="Movie Poster">
+                                <div class="card-body d-flex flex-column">
                                     <h5 class="card-title">`+ data.Title +`</h5>
                                     <h6 class="card-subtitle mb-2 text-body-secondary">`+ data.Year +`</h6>
-                                    <a href="#" class="btn btn-primary see-details" data-bs-toggle="modal" data-bs-target="#movieModal" data-id="`+ data.imdbID +`">See details</a>
+                                    <a href="#" class="btn btn-primary mt-auto see-details" data-bs-toggle="modal" data-bs-target="#movieModal" data-id="`+ data.imdbID +`">See details</a>
                                 </div>
                             </div>
                         </div>
