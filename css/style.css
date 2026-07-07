@@ -538,7 +538,7 @@ body {
   text-transform: capitalize;
 }
 .card__btn {
-  margin-top: 12px;
+  margin-top: auto; /* pin to card bottom so buttons align across a row */
   font-family: var(--font-display);
   font-weight: 600;
   font-size: 0.98rem;

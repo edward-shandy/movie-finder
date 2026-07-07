@@ -18,8 +18,8 @@
     <script>
       (function () {
         try {
-          var t = localStorage.getItem("moviedex-theme");
-          if (!t) t = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+          // Default to light; only use dark if the user chose it before.
+          var t = localStorage.getItem("moviedex-theme") || "light";
           document.documentElement.setAttribute("data-theme", t);
         } catch (e) {}
       })();
